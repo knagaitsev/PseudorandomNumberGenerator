@@ -6,12 +6,13 @@ void usage() {
           "       -h          show this help menu\n"
           "       -b          generate binary file\n"
           "       -n <NUM>    the number of values to create (default = 2^25)\n"
+          "       -s <SEED>   seed\n"
           "       -o <FILE>   give name to output file (default = "
           "pseudorandomnumbers.txt)\n\n");
   exit(-1);
 }
 
-void handle_args(int argc, char** argv, uint64_t* N, char* binary,
+void handle_args(int argc, char** argv, uint64_t* N, double* seed, char* binary,
                  char* filename) {
   *N = 33554432;
   *binary = 0;
@@ -28,6 +29,9 @@ void handle_args(int argc, char** argv, uint64_t* N, char* binary,
         break;
       case 'o':
         strcpy(filename, optarg);
+        break;
+      case 's':
+        *seed = atof(optarg);
         break;
       case 'n':
         *N = atoll(optarg);

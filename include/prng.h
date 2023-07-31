@@ -2,4 +2,4 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void prng(double *data, uint64_t size);
+void prng(double *data, uint64_t size, double seed);
