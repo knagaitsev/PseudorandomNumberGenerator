@@ -5,4 +5,4 @@
 #include <unistd.h>
 
 void usage();
-void handle_args(int argc, char** argv, uint64_t* N, char* binary, char* filename);
+void handle_args(int argc, char** argv, uint64_t* N, double* seed, char* binary, char* filename);
