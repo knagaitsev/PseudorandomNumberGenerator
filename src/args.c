@@ -19,7 +19,7 @@ void handle_args(int argc, char** argv, uint64_t* N, double* seed, char* binary,
   strcpy(filename, "pseudorandomnumbers.txt");
 
   int opt;
-  while ((opt = getopt(argc, argv, "hbn:o:")) != -1) {
+  while ((opt = getopt(argc, argv, "hbs:n:o:")) != -1) {
     switch (opt) {
       case 'h':
         usage();
