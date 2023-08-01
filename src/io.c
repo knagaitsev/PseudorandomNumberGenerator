@@ -35,7 +35,7 @@ char write_text(char* filename, double* data, uint64_t size) {
     return FALSE;
   }
 
-  fprintf(fp, "(");
+  fprintf(fp, "( ");
   for (uint64_t i = 0; i < size; i++) {
     progress(i, size);
     fprintf(fp, "%.15f ", data[i]);
